@@ -8,7 +8,6 @@ public abstract class Card {
 	private String img;
 
 	protected Card(String name, String img) {
-		super();
 		this.name = name;
 		this.img = img;
 	}
