@@ -19,12 +19,15 @@ public class Board {
     public List<Card> getHand() {
         return hand;
     }
+    
     public void setHand(List<Card> hand) {
         this.hand = hand;
     }
+    
     public List<Card> getKingdom() {
         return kingdom;
     }
+    
     public void setKingdom(List<Card> kingdom) {
         this.kingdom = kingdom;
     }
@@ -32,14 +35,11 @@ public class Board {
     public int getPosition() {
         return position;
     }
+    
     public void setPosition(int position) {
         this.position = position;
     }
 
-
-	/*
-	 * Fonction:
-	 * 				Affichage();
-	 */
-
+    
+    //TODO show function
 }

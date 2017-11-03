@@ -1,11 +1,18 @@
 package fr.esilv.fsociety.cardgame.api;
 
+/**
+ * Represents the 2 boards and more generally the game taking place
+ */
 public class Game {
 
-	/* Doit :
-	 * 			afficher les 2 boards
-	 * 			Déterminer où clic le joueur
-	 * 			Déterminer les tours des joueurs => Bloquer le  joueur qui ne joue pas
-	 * 			Finir le tour quand demandé
+	private Player currentPlayer;
+	
+	/**
+	 * The card c was clicked
+	 * @param c
 	 */
+	public void onClick(Card c) {
+		
+	}
+	
 }

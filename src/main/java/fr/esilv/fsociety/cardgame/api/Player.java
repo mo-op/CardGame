@@ -2,15 +2,22 @@ package fr.esilv.fsociety.cardgame.api;
 
 public class Player {
 
-    private int Score;
-    private Board ownboard;
-    //Autres attributs?
+    private Board board;
+   
+    public Player(Board board) {
+    	this.board = board;
+    }
 
-    //Constructeur à faire
+    
+    public Board getBoard() {
+    	return this.board;
+    }
 
-
-	/*
-	 * Fonctions:
-	 * 				Dealer (generateur de cartes)
-	 */
+    /**
+     * Calculate the score
+     * @return
+     */
+    public int getScore() {
+    	return 0;
+    }
 }
