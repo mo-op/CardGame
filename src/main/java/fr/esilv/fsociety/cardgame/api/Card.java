@@ -1,32 +1,46 @@
 package fr.esilv.fsociety.cardgame.api;
 
-/**
- * Represents a card that can be picked from the deck, played by a player or activated
- *
- */
-public abstract class Card {
 
-	public final String name; // the name of the card
-	public final String description; // the description of the card, what its effects will be
-	
-	protected Card(String name, String description) {
+import java.awt.Image;
+
+public class Card {
+	private String name;
+	protected static Image img;
+	protected static String NameofRace;
+
+	public Card(String name, Image img, String race) {
+		super();
 		this.name = name;
-		this.description = description;
+		this.img = img;
+		this.NameofRace = race;
 	}
-	
-	
-	/**
-	 * Get the name of the texture that should be used to display this card on the board
-	 * @return texture id
-	 */
-	public String getTextureName() {
-		return null;
+
+
+	public String getName() {
+		return name;
 	}
-	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public static Image getImg() {
+		return img;
+	}
+	public static void setImg(Image img) {
+		Card.img = img;
+	}
+	public static String getNameofRace() {
+		return NameofRace;
+	}
+	public static void setNameofRace(String nameofRace) {
+		NameofRace = nameofRace;
+	}
+
+
 	/*
-	 * Activate this card for the specified player<br>
-	 * TODO: replace type of arguments with api types when done
+	 * Fonction:
+	 * 				Affichage();
+	 * 				UseCard();
 	 */
-	public abstract void activate(Object board, Object player);
-	
+
+
 }
