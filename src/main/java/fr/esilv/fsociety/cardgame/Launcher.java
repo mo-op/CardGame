@@ -10,7 +10,7 @@ public class Launcher extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(Launcher.class.getResource("/fr.esilv.fsociety.cardgame/MenuOverview.fxml"));
+        FXMLLoader loader = new FXMLLoader(Launcher.class.getResource("/fr.esilv.fsociety.cardgame/MainFrame.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("Menu");
         primaryStage.setScene(new Scene(root, 300, 275));

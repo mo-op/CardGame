@@ -1,5 +1,8 @@
 package fr.esilv.fsociety.cardgame.api;
+import java.util.LinkedList;
 import java.util.List;
+
+import javafx.scene.image.ImageView;
 
 public class Board {
 
@@ -39,6 +42,23 @@ public class Board {
     public void setPosition(int position) {
         this.position = position;
     }
+
+	public ImageView[] handToImageViews() {
+		return this.toImageView(hand);
+	}
+	
+	public ImageView[] kingdomToImageViews() {
+		return this.toImageView(kingdom);
+	}
+	
+	private ImageView[] toImageView(List<Card> l) {
+		LinkedList<ImageView> list = new LinkedList();
+		
+		for(Card c:l)
+			list.add(c.toImageView());
+		
+		return list.toArray(new ImageView[0]);		
+	}
 
     
     //TODO show function

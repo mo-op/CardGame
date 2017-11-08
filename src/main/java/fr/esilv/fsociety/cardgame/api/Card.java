@@ -1,7 +1,11 @@
 package fr.esilv.fsociety.cardgame.api;
 
 
-import java.awt.Image;
+import fr.esilv.fsociety.cardgame.controller.MainController;
+import javafx.event.EventHandler;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 
 public abstract class Card {
 	private String name;
@@ -19,6 +23,18 @@ public abstract class Card {
 	
 	public String getImageTexture() {
 		return this.img;
+	}
+	
+	public ImageView toImageView() {
+		ImageView i = new ImageView(this.getImageTexture());
+		
+		
+		i.setOnMouseClicked( (MouseEvent evt) -> {
+			if(evt.getButton() == MouseButton.PRIMARY) {
+				MainController.getInstance().onClick(this);
+			}
+		});
+		return i;
 	}
 	
 	/**
